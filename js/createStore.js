@@ -18,7 +18,14 @@ function createStore() {
     render();
   };
  
-  return { dispatch };
+  function getState() {
+    return state;
+  }
+ 
+  return {
+    dispatch,
+    getState
+  };
 };
 
 function render() {
