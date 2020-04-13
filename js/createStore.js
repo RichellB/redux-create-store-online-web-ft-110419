@@ -30,7 +30,7 @@ function createStore() {
 
 function render() {
   let container = document.getElementById('container');
-  container.textContent = state.count;
+  container.textContent = store.getState().count;
 };
 
 dispatch({ type: '@@INIT' })
